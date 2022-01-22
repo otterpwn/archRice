@@ -1,47 +1,53 @@
+color=#E5B4E2
+
 [KITTY]
 full_text= =＾● ⋏ ●＾=
 color=#E5B4E2
 
-# [WEATHER_SIGNALER]
-# command=~/.config/i3blocks/weather/weather_signaler
-# interval=once
+[VOLUME]
+command=~/.config/i3blocks-contrib/volume/volume
+LABEL= 🎵 
+interval=1
+signal=10
+STEP=5%
+color=#E5B4E2
 
-# [WEATHER]
-# command=~/.config/i3blocks/weather/weather_info.sh
-# interval=300
-# color=#DA70D6
-# signal=2
+[MEDIAPLAYER]
+command=~/.config/i3blocks-contrib/mediaplayer/mediaplayer
+instance=spotify
+interval=5
+signal=10
+color=#E5B4E2
 
 [DISK]
 command=df -h / | awk '/\//{ printf(" 💾 %4s/%s \n", $4, $2) }'
 interval=2
 color=#E5B4E2
 
-#[BATTERY]
-#command=~/.config/i3blocks/battery/battery_info.sh
-#interval=3
-
-#[CPU]
-#full_text= CPU:  0.00% @ +00.0°C 
-#command=~/.config/i3blocks/cpu/cpu_info.sh
-#interval=repeat
-#color=#00B4EB
-
 [MEM]
 command=free -h | awk '/Mem:/ { printf("😾 %5s/%s \n", $3, $2) }'
 interval=1
 color=#E5B4E2
 
-[SOUND_BURST]
-command=~/.config/i3blocks/sound/sound_burst.sh
-interval=once
+[BATTERY]
+command=~/.config/i3blocks-contrib/battery/battery
+interval=30
+LABEL=BAT
+LABEL=⚡
+BAT_NUMBER=0
+color=#E5B4E2
 
-#[SOUND]
-#full_text= 🔇:  0% 
-#command=~/.config/i3blocks/sound/sound_info.sh
-#interval=0
-#signal=1
+[USB]
+command=~/.config/i3blocks-contrib/usb/usb
+markup=pango
+signal=1
+interval=10
+IGNORE_LIST=[]
+IGNORE_LIST=["sdd1", "mapper/sda1_crypt", "sda1", "sda3"]
+PARTITIONLESS_COLOR=#E5B4E2
+PARTITIONLESS_TEXT=no USB
 
 [TIME_DATE]
 command=date +" %a, %d %b - %H:%M:%S"
 interval=1
+color=#E5B4E2
