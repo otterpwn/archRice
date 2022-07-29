@@ -1,0 +1,76 @@
+/********************************************************
+
+                             ʕ •ᴥ•ʔ
+
+ ********************************************************/
+
+* {
+    bg:           #101010;
+    bg-border:    #c79dbf;
+    fg:           #c79dbf;
+    accent-bg:    #c79dbf;
+    accent-fg:    #101010;
+
+    spacing:          10;
+
+    background-color: @bg;
+}
+
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+window {
+    width:            40%;
+    border:           2;
+    padding:          12;
+    background-color: @bg;
+    border-color:     @bg-border;
+}
+
+inputbar {
+    spacing:    0px;
+    padding:    0px 5px 0px 5px;
+    text-color: @fg;
+    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+
+prompt {
+    spacing:    0;
+    text-color: @accent-bg;
+}
+
+textbox-prompt-colon {
+    expand:     false;
+    str:        ":";
+    margin:     0px 0.3em 0em 0em ;
+    text-color: @fg;
+}
+
+entry {
+    spacing:    5px;
+    text-color: @fg;
+}
+
+listview {
+    fixed-height: 0;
+    spacing:      0px ;
+    scrollbar:    false;
+    lines:        4;
+}
+
+element {
+    border:  0;
+    padding: 10px 5px 10px 5px;
+    background-color: @bg;
+    text-color:       #ffffff;
+}
+
+element.selected {
+    border: 2;
+    border-color: @accent-bg;
+    background-color: @accent-bg;
+    text-color:       @accent-fg;
+}
+
