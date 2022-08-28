@@ -3,19 +3,28 @@
 # Restore wallpaper
 nitrogen --restore
 
+# Load notification dunst configuration file
+/home/cinderz/.config/dunst/reload
+
 # Set up environment
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 # Check if second monitor is connected and activate it
-if [[ $(xrandr -q | grep 'HDM1 connected') ]]; then
-	xrandr --output eDP1 --primary --mode 1366x768 --rotate normal --output HDMI1 --mode 1920x1080 --rotate normal --right-of eDP1
-fi
+#if [[ $(xrandr -q | grep 'HDM1 connected') && $(xrandr -q | grep 'eDP1 connected') ]] ; then
+#    xrandr --output eDP1 --primary --mode 1366x768 --rotate normal --output HDMI1 --mode 1920x1080 --rotate normal --right-of eDP1
+#    # Assign different workspaces to the monitors
+#    bspc monitor eDP1 -d 一 二 三 四 五
+#    bspc monitor HDMI1 -d 六 七 八 九 十
+#else
+#    # Assign different workspaces to the monitors
+#    bspc monitor eDP1 -d 一 二 三 四 五 六 七 八 九 十
+#fi
 
-$HOME/.config/polybar/launch.sh
-
-# Assign different workspaces to the monitors
 bspc monitor eDP1 -d 一 二 三 四 五
 bspc monitor HDMI1 -d 六 七 八 九 十
+
+# Load polybar configuration
+$HOME/.config/polybar/launch.sh
 
 bspc config border_width         3
 bspc config window_gap           2
@@ -40,6 +49,9 @@ dunst -config $HOME/.config/dunstrc &
 # Start compositor
 while pgrep -u $UID -x picom >/dev/null; do sleep 1; done
 picom  --config $HOME/.config/picom.conf
+
+# Add rules for programs
+#	check attributes with `xprop`
 
 # How to restrict windows to workspaces
 #declare -a terminal=(Alacritty Xfce4-terminal)
