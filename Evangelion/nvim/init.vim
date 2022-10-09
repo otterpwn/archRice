@@ -21,7 +21,7 @@ Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
 Plug 'https://github.com/neoclide/coc.nvim'  " Auto Completion
 Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
 Plug 'https://github.com/tc50cal/vim-terminal' " Vim Terminal
-Plug 'https://github.com/preservim/tagbar' " Tagbar for code navigation
+Plug 'majutsushi/tagbar' " tagbar
 Plug 'https://github.com/terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
 Plug 'vim-airline/vim-airline-themes' " Themes for airline 
 
@@ -35,11 +35,15 @@ nnoremap <C-f> :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>
-nmap <F8> :TagbarToggle<CR>
+" nmap <F8> :TagbarToggle<CR>
+nnoremap <silent> <C-K><C-D> :TagbarToggle<CR>
 nmap <F9> :nohl
 imap jk <esc>
+vmap <C-c> "+yi
 
 :set completeopt-=preview " For No Previews
+
+let g:tagbar_ctags_bin = '/home/cinderz/apps/ctags/bin/ctags'
 
 " Color theme
 :colorscheme jellybeans
@@ -59,7 +63,7 @@ let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
+let g:airline_symbols.readonly = '🔒'
 let g:airline_symbols.linenr = ''
 """"""""""""""""""""""""""""""""""""""""""""""
 
@@ -79,4 +83,7 @@ inoremap <silent><expr> <Tab>
 " Use <Tab> and <S-Tab> to navigate the completion list
 inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
 inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
+
+" Use <Enter> to accept autocompletion
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 """"""""""""""""""""""""""""""""""""""""""""""

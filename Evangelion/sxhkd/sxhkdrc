@@ -131,3 +131,10 @@ super + space
 # flameshot
 Print
 	flameshot gui
+
+# Change screen configuration with scripts
+super + F1
+	/home/cinderz/.config/sxhkd/display-configuration1.sh
+
+super + F2
+	/home/cinderz/.config/sxhkd/display-configuration2.sh
