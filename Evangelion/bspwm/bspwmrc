@@ -1,7 +1,14 @@
 #! /bin/sh
 
-# Restore wallpaper
-nitrogen --restore
+# INITIAL SETUP =================
+# Check if second monitor is connected and activate it
+/home/cinderz/Desktop/archRice/Evangelion/sxhkd/2screen.sh
+
+# Start polybar
+$HOME/.config/polybar/launch.sh
+
+# Launch notification daemon
+dunst -config $HOME/.config/dunstrc &
 
 # Load notification dunst configuration file
 /home/cinderz/.config/dunst/reload
@@ -9,19 +16,20 @@ nitrogen --restore
 # Set up environment
 pgrep -x sxhkd > /dev/null || sxhkd &
 
+# Fix pointer
+xsetroot -cursor_name left_ptr
+
+# Start compositor
+#while pgrep -u $UID -x picom >/dev/null; do sleep 1; done
+#picom  --config $HOME/.config/picom.conf
+
 # Assign different workspaces to the monitors
-bspc monitor eDP1 -d 一 二 三 四 五
-bspc monitor HDMI1 -d 六 七 八 九 十
+#bspc monitor eDP-1 -d 一 二 三 四 五
+#bspc monitor HDMI-1 -d 六 七 八 九 十
+#bspc monitor eDP-1 -d 1 2 3 4 5
+#bspc monitor HDMI-1 -d 6 7 8 9 10
 
-# Check if second monitor is connected and activate it
-# if [[ $(xrandr -q | grep 'HDM1 connected') ]] ; then
-#     xrandr --output eDP1 --primary --mode 1366x768 --rotate normal --output HDMI1 --mode 1920x1080 --rotate normal --right-of eDP1
-#     # Assign different workspaces to the monitors
-#     bspc monitor eDP1 -d 一 二 三 四 五 六 七 八 九 十
-# fi
-
-# Load polybar configuration
-$HOME/.config/polybar/launch.sh
+# BSPWM SETTINGS =================
 
 bspc config border_width         3
 bspc config window_gap           2
@@ -36,16 +44,6 @@ bspc config gapless_monocle       true
 bspc config paddingless_monocle   true
 bspc config single_monocle        false
 bspc config focus_follows_pointer true
-
-# Fix pointer
-xsetroot -cursor_name left_ptr
-
-# Launch notification daemon
-dunst -config $HOME/.config/dunstrc &
-
-# Start compositor
-while pgrep -u $UID -x picom >/dev/null; do sleep 1; done
-picom  --config $HOME/.config/picom.conf
 
 # Add rules for programs
 #	check attributes with `xprop`

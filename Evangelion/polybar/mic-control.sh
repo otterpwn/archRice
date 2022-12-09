@@ -1,6 +1,8 @@
 #!/bin/sh
 
-if [ $(pulseaudio-ctl | grep "Is source muted" | wc -c) -eq 47 ]
+CURRENT_SOURCE=$(pactl info | grep "Default Source" | cut -f3 -d" ")
+
+if [ $(pactl list sources | grep -A 10 $CURRENT_SOURCE | grep "Mute: yes" | wc -c) -eq 11 ]
 then
 	echo " NO MIC " 
 else

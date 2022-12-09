@@ -18,7 +18,7 @@ Plug 'https://github.com/tpope/vim-commentary' " For Commenting gcc & gc
 Plug 'https://github.com/vim-airline/vim-airline' " Status bar
 Plug 'https://github.com/ap/vim-css-color' " CSS Color Preview
 Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
-Plug 'https://github.com/neoclide/coc.nvim'  " Auto Completion
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " Autocompletion
 Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
 Plug 'https://github.com/tc50cal/vim-terminal' " Vim Terminal
 Plug 'majutsushi/tagbar' " tagbar
@@ -43,7 +43,7 @@ vmap <C-c> "+yi
 
 :set completeopt-=preview " For No Previews
 
-let g:tagbar_ctags_bin = '/home/cinderz/apps/ctags/bin/ctags'
+let g:tagbar_ctags_bin = '/usr/bin/ctags'
 
 " Color theme
 :colorscheme jellybeans
