@@ -16,7 +16,7 @@ super + q
 
 # wifi menu
 super + e
-	bash /home/cinderz/Desktop/archRice/Evangelion/rofi/rofi-wifi-menu/rofi-wifi-menu.sh
+	bash /home/cinderz/.config/rofi/rofi-wifi-menu/rofi-wifi-menu.sh
 
 # make sxhkd reload its configuration files:
 super + Escape
