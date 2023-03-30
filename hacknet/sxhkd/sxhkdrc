@@ -8,15 +8,15 @@ super + Return
 
 # program launcher
 super + d
-	rofi -show run
+	rofi -modi drun -show drun
 
 # emoji launcher
 super + q
 	splatmoji copy
 
 # wifi menu
-super + e
-	bash /home/cinderz/.config/rofi/rofi-wifi-menu/rofi-wifi-menu.sh
+super + shift + e
+	bash ~/.config/rofi/rofi-network-manager/rofi-network-manager.sh
 
 # make sxhkd reload its configuration files:
 super + Escape
