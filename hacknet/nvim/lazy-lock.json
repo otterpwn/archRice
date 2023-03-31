@@ -17,7 +17,6 @@
   "nvim-treesitter": { "branch": "master", "commit": "dcb9a89ab4f0091bf87aed4e6801423d3667f76a" },
   "nvim-treesitter-textobjects": { "branch": "master", "commit": "5b2bcb9ca8315879181f468b37a897100d631005" },
   "nvim-web-devicons": { "branch": "master", "commit": "585dbc29315ca60be67d18ae6175771c3fb6791e" },
-  "onedark.nvim": { "branch": "master", "commit": "4497678c6b1847b663c4b23000d55f28a2f846ce" },
   "oxocarbon.nvim": { "branch": "main", "commit": "fc236ef07361a1596081f242940f97af3ba26db1" },
   "plenary.nvim": { "branch": "master", "commit": "253d34830709d690f013daf2853a9d21ad7accab" },
   "telescope-fzf-native.nvim": { "branch": "main", "commit": "580b6c48651cabb63455e97d7e131ed557b8c7e2" },
@@ -25,6 +24,7 @@
   "vim-fugitive": { "branch": "master", "commit": "5b52a0f395065d6cb7b65a00a5e17eaf9ebd64d5" },
   "vim-rhubarb": { "branch": "master", "commit": "cad60fe382f3f501bbb28e113dfe8c0de6e77c75" },
   "vim-sleuth": { "branch": "master", "commit": "1cc4557420f215d02c4d2645a748a816c220e99b" },
+  "vimtex": { "branch": "master", "commit": "1043b590d98fa3f069a0879c65293aa2c7c31b0d" },
   "which-key.nvim": { "branch": "main", "commit": "fb027738340502b556c3f43051f113bcaa7e8e63" },
   "wrapping.nvim": { "branch": "master", "commit": "a4013c377e2ffa3be00fb67791d3605ae3115acb" }
 }

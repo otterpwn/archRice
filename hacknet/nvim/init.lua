@@ -69,6 +69,17 @@ require('lazy').setup({
     require("nvim-tree").setup {}
   end,
 },
+{ -- vimtex
+    'lervag/vimtex',
+    opt = true,
+    config = function ()
+        vim.g.vimtex_view_method = 'zathura'
+        vim.g.vimtex_view_general_method = 'okular'
+        vim.g.vimtex_compiler_method = 'latexmk'
+        vim.g.vimtex_view_general_options = [[--unique file:@pdf\#src:@line@tex]]
+    end,
+    ft = 'tex'
+},
 
 { -- Wrapping text with toggle
         "andrewferrier/wrapping.nvim",
