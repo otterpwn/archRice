@@ -1,8 +1,9 @@
+#/home/cinderz/.config/sxhkd/2screen.sh
 #! /bin/sh
 
 # INITIAL SETUP =================
 # Check if second monitor is connected and activate it
-/home/cinderz/Desktop/archRice/hacknet/sxhkd/2screen.sh
+/home/cinderz/.config/sxhkd/2screen.sh
 
 # Start polybar
 $HOME/.config/polybar/launch.sh
@@ -46,7 +47,6 @@ bspc config borderless_monocle    true
 bspc config gapless_monocle       true
 bspc config paddingless_monocle   true
 bspc config single_monocle        false
-bspc config focus_follows_pointer true
 
 # Add rules for programs
 #	check attributes with `xprop`

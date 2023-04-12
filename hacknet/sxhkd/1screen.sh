@@ -7,6 +7,6 @@ feh --bg-fill /home/cinderz/Desktop/archRice/allWallpapers/hacknet.jpg
 
 # set bspwm workspaces
 bspc monitor eDP-1 -d 一 二 三 四 五 六 七 八 九 十
-#
+
 # launch plolybar config
 $HOME/.config/polybar/launch.sh
