@@ -1,9 +1,14 @@
-#/home/cinderz/.config/sxhkd/2screen.sh
 #! /bin/sh
 
 # INITIAL SETUP =================
+# this fixes burpsuite and ghidra jesus christ abatakaaaaaaam
+wmname LG3D &
+
+# set wallpaper
+feh --bg-fill /home/otter/Desktop/archRice/allWallpapers/hacknet.jpg
+
 # Check if second monitor is connected and activate it
-/home/cinderz/.config/sxhkd/2screen.sh
+/home/otter/Desktop/archRice/hacknet/sxhkd/2screen.sh
 
 # Start polybar
 $HOME/.config/polybar/launch.sh
@@ -12,7 +17,7 @@ $HOME/.config/polybar/launch.sh
 dunst -config $HOME/.config/dunstrc &
 
 # Load notification dunst configuration file
-/home/cinderz/.config/dunst/reload
+/home/otter/.config/dunst/reload
 
 # Set up environment
 pgrep -x sxhkd > /dev/null || sxhkd &
@@ -39,7 +44,7 @@ bspc config border_width         1
 bspc config window_gap           5
 bspc config split_ratio		 0.50
 
-bspc config focused_border_color "#282828"
+bspc config focused_border_color "#e0e0e0"
 bspc config normal_border_color "#1a1b26"
 bspc config active_border_color "#444b6a"
 
@@ -47,6 +52,7 @@ bspc config borderless_monocle    true
 bspc config gapless_monocle       true
 bspc config paddingless_monocle   true
 bspc config single_monocle        false
+#bspc config focus_follows_pointer true
 
 # Add rules for programs
 #	check attributes with `xprop`

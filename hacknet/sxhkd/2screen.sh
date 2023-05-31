@@ -6,8 +6,8 @@ xrandr --output eDP-1 --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1
 feh --bg-fill /home/cinderz/Desktop/archRice/allWallpapers/hacknet.jpg
 
 # set bspwm workspaces
-bspc monitor eDP-1 -d 一 二 三 四 五
-bspc monitor HDMI-1 -d 六 七 八 九 十
+bspc monitor eDP-1 -d 1 2 3 4 5
+bspc monitor HDMI-1 -d 6 7 8 9 10
 
 # launch plolybar config
 $HOME/.config/polybar/launch.sh

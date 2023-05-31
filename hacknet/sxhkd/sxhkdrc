@@ -11,7 +11,7 @@ super + d
 	rofi -modi drun -show drun
 
 # emoji launcher
-super + q
+super + w
 	splatmoji copy
 
 # wifi menu
@@ -19,8 +19,8 @@ super + shift + e
 	bash ~/.config/rofi/rofi-network-manager/rofi-network-manager.sh
 
 # make sxhkd reload its configuration files:
-super + Escape
-	pkill -USR1 -x sxhkd
+#super + Escape
+#	pkill -USR1 -x sxhkd
 
 #
 # bspwm hotkeys
@@ -31,7 +31,7 @@ super + alt + {q,r}
 	bspc {quit,wm -r}
 
 # close and kill
-super + shift + q
+super + {_, shift +} q
 	bspc node -{c,k}
 
 # alternate between the tiled and monocle layout
@@ -130,7 +130,7 @@ super + {Left,Down,Up,Right}
 
 # keybinding to change keyboard layout with `change_layout.sh` script
 super + space
-	/home/cinderz/.config/sxhkd/change_layout.sh
+	/home/otter/.config/sxhkd/change_layout.sh
 
 # flameshot
 Print
@@ -138,7 +138,7 @@ Print
 
 # Change screen configuration with scripts
 super + alt + 1
-	/home/cinderz/.config/sxhkd/1screen.sh
+	/home/otter/.config/sxhkd/1screen.sh
 
 super + alt + 2
-	/home/cinderz/.config/sxhkd/2screen.sh
+	/home/otter/.config/sxhkd/2screen.sh

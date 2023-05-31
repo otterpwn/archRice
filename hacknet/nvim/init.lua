@@ -141,6 +141,9 @@ require('lazy').setup({
       show_trailing_blankline_indent = false,
     },
   },
+  {
+    'fatih/vim-go',
+  },
 
   -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim', opts = {} },
