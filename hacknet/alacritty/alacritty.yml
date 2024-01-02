@@ -2,7 +2,7 @@
 
 # Window Customization
 window:
-  opacity: .9
+  opacity: 1
   dimensions:
     columns: 140
     lines: 38
@@ -16,25 +16,46 @@ scrolling:
 window.dynamic_title: true
 
 # Font Customization
+# font:
+#   normal:
+#     family: Hack Nerd Font Mono
+#     style: Regular
+#   bold:
+#     family: Hack Nerd Font Mono
+#     style: Bold
+#   italic:
+#     family: Hack Nerd Font Mono
+#     style: Italic
+#   size: 10
+#   offset:
+#     x: 0
+#     y: 0
+#   glyph_offset:
+#     x: 0
+#     y: 0
+#   debug:
+#     persistent_logging: false
 font:
   normal:
-    family: Hack Nerd Font Mono
+    family: Iosevka Nerd Font
     style: Regular
+
   bold:
-    family: Hack Nerd Font Mono
-    style: Bold
+    family: Iosevka Nerd Font
+
   italic:
-    family: Hack Nerd Font Mono
-    style: Italic
-  size: 10
+    family: Iosevka Nerd Font
+
+  size: 11.0
+
   offset:
-    x: 0
+    x: 1
     y: 0
+
   glyph_offset:
     x: 0
     y: 0
-  debug:
-    persistent_logging: false
+
 draw_bold_text_with_bright_colors: true
 
 # Colors (Doom One)
@@ -50,7 +71,7 @@ colors:
     red:     '0xff6c6b'
     green:   '0x98be65'
     yellow:  '0xecbe7b'
-    blue:    '0x51afef'
+    blue:    '0x6f58d3'
     magenta: '0xc678dd'
     cyan:    '0x46d9ff'
     white:   '0xbbc2cf'

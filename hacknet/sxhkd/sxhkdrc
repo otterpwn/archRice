@@ -19,8 +19,8 @@ super + shift + e
 	bash ~/.config/rofi/rofi-network-manager/rofi-network-manager.sh
 
 # make sxhkd reload its configuration files:
-#super + Escape
-#	pkill -USR1 -x sxhkd
+super + Escape
+	pkill -USR1 -x sxhkd
 
 #
 # bspwm hotkeys
@@ -71,7 +71,8 @@ super + {p,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous window in the current desktop
-super + {_,shift + }c
+# super + {_,shift + }c
+super + ctrl + {j, k}
 	bspc node -f {next,prev}.local.!hidden.window
 
 # focus the next/previous desktop in the current monitor
@@ -92,13 +93,14 @@ super + {o,i}
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
+
 #
 # preselect
 #
 
 # preselect the direction
-super + ctrl + {h,j,k,l}
-	bspc node -p {west,south,north,east}
+# super + alt + {h,j,k,l}
+# 	bspc node -p {west,south,north,east}
 
 # preselect the ratio
 super + ctrl + {1-9}

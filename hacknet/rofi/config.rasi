@@ -3,7 +3,7 @@ configuration {
 	width: 900;
 	lines: 15;
 	columns: 1;
-	font: "Terminus (TTF) 12";
+	font: "Iosevka Nerd Font 11";
 	bw: 1;
 	show-icons: true;
 	terminal: "alacritty";
